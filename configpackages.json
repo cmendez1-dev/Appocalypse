@@ -1,103 +1,48 @@
 {
   "categories": [
     {
-      "name": "Browsers",
-      "packages": [
-        { "name": "Google Chrome", "wingetId": "Google.Chrome", "description": "Fast and secure web browser" },
-        { "name": "Mozilla Firefox", "wingetId": "Mozilla.Firefox", "description": "Privacy-focused web browser" },
-        { "name": "Brave Browser", "wingetId": "Brave.Brave", "description": "Privacy-first browser with ad blocking" },
-        { "name": "Microsoft Edge", "wingetId": "Microsoft.Edge", "description": "Microsoft's Chromium-based browser" },
-        { "name": "Vivaldi", "wingetId": "Vivaldi.Vivaldi", "description": "Customizable browser for power users" }
-      ]
-    },
-    {
       "name": "Communication",
       "packages": [
-        { "name": "Discord", "wingetId": "Discord.Discord", "description": "Voice, video, and text chat" },
-        { "name": "Slack", "wingetId": "SlackTechnologies.Slack", "description": "Business communication platform" },
-        { "name": "Zoom", "wingetId": "Zoom.Zoom", "description": "Video conferencing" },
-        { "name": "Microsoft Teams", "wingetId": "Microsoft.Teams", "description": "Collaboration and chat" },
-        { "name": "Telegram", "wingetId": "Telegram.TelegramDesktop", "description": "Secure messaging app" },
-        { "name": "Signal", "wingetId": "OpenWhisperSystems.Signal", "description": "Encrypted messaging" }
-      ]
-    },
-    {
-      "name": "Development",
-      "packages": [
-        { "name": "Visual Studio Code", "wingetId": "Microsoft.VisualStudioCode", "description": "Lightweight code editor" },
-        { "name": "Git", "wingetId": "Git.Git", "description": "Version control system" },
-        { "name": "Node.js LTS", "wingetId": "OpenJS.NodeJS.LTS", "description": "JavaScript runtime" },
-        { "name": "Python 3", "wingetId": "Python.Python.3.12", "description": "Python programming language" },
-        { "name": "Docker Desktop", "wingetId": "Docker.DockerDesktop", "description": "Container platform" },
-        { "name": "Windows Terminal", "wingetId": "Microsoft.WindowsTerminal", "description": "Modern terminal app" },
-        { "name": "Postman", "wingetId": "Postman.Postman", "description": "API development tool" },
-        { "name": "JetBrains IntelliJ IDEA CE", "wingetId": "JetBrains.IntelliJIDEA.Community", "description": "Java IDE" },
-        { "name": "Notepad++", "wingetId": "Notepad++.Notepad++", "description": "Advanced text editor" },
-        { "name": "GitHub Desktop", "wingetId": "GitHub.GitHubDesktop", "description": "Git GUI client" }
-      ]
-    },
-    {
-      "name": "Media",
-      "packages": [
-        { "name": "VLC Media Player", "wingetId": "VideoLAN.VLC", "description": "Universal media player" },
-        { "name": "Spotify", "wingetId": "Spotify.Spotify", "description": "Music streaming" },
-        { "name": "OBS Studio", "wingetId": "OBSProject.OBSStudio", "description": "Streaming and recording" },
-        { "name": "HandBrake", "wingetId": "HandBrake.HandBrake", "description": "Video transcoder" },
-        { "name": "Audacity", "wingetId": "Audacity.Audacity", "description": "Audio editor" },
-        { "name": "GIMP", "wingetId": "GIMP.GIMP", "description": "Image editor" },
-        { "name": "ShareX", "wingetId": "ShareX.ShareX", "description": "Screenshot and screen recorder" }
+        {
+          "name": "Slack",
+          "wingetId": "SlackTechnologies.Slack",
+          "description": "Team messaging and collaboration"
+        },
+        {
+          "name": "Zoom",
+          "wingetId": "Zoom.Zoom",
+          "description": "Video conferencing"
+        },
+        {
+          "name": "WebEx",
+          "wingetId": "Cisco.WebexTeams",
+          "description": "Cisco video conferencing and messaging"
+        }
       ]
     },
     {
       "name": "Productivity",
       "packages": [
-        { "name": "7-Zip", "wingetId": "7zip.7zip", "description": "File archiver" },
-        { "name": "Adobe Acrobat Reader", "wingetId": "Adobe.Acrobat.Reader.64-bit", "description": "PDF reader" },
-        { "name": "LibreOffice", "wingetId": "TheDocumentFoundation.LibreOffice", "description": "Office suite" },
-        { "name": "Notion", "wingetId": "Notion.Notion", "description": "All-in-one workspace" },
-        { "name": "Obsidian", "wingetId": "Obsidian.Obsidian", "description": "Knowledge base and notes" },
-        { "name": "PowerToys", "wingetId": "Microsoft.PowerToys", "description": "Windows utilities" },
-        { "name": "Everything Search", "wingetId": "voidtools.Everything", "description": "Instant file search" }
-      ]
-    },
-    {
-      "name": "Security & Privacy",
-      "packages": [
-        { "name": "Bitwarden", "wingetId": "Bitwarden.Bitwarden", "description": "Password manager" },
-        { "name": "KeePassXC", "wingetId": "KeePassXCTeam.KeePassXC", "description": "Offline password manager" },
-        { "name": "Malwarebytes", "wingetId": "Malwarebytes.Malwarebytes", "description": "Anti-malware" },
-        { "name": "WireGuard", "wingetId": "WireGuard.WireGuard", "description": "VPN client" },
-        { "name": "ProtonVPN", "wingetId": "ProtonTechnologies.ProtonVPN", "description": "Secure VPN" }
-      ]
-    },
-    {
-      "name": "Utilities",
-      "packages": [
-        { "name": "WinRAR", "wingetId": "RARLab.WinRAR", "description": "File archiver" },
-        { "name": "CPU-Z", "wingetId": "CPUID.CPU-Z", "description": "System information" },
-        { "name": "TreeSize Free", "wingetId": "JAMSoftware.TreeSize.Free", "description": "Disk space analyzer" },
-        { "name": "Rufus", "wingetId": "Rufus.Rufus", "description": "USB bootable creator" },
-        { "name": "WizTree", "wingetId": "AntibodySoftware.WizTree", "description": "Disk space analyzer" },
-        { "name": "qBittorrent", "wingetId": "qBittorrent.qBittorrent", "description": "Torrent client" },
-        { "name": "HWiNFO", "wingetId": "REALiX.HWiNFO", "description": "Hardware information" }
-      ]
-    },
-    {
-      "name": "Gaming",
-      "packages": [
-        { "name": "Steam", "wingetId": "Valve.Steam", "description": "Gaming platform" },
-        { "name": "Epic Games Launcher", "wingetId": "EpicGames.EpicGamesLauncher", "description": "Game store" },
-        { "name": "GOG Galaxy", "wingetId": "GOG.Galaxy", "description": "Game launcher" },
-        { "name": "GeForce Experience", "wingetId": "Nvidia.GeForceExperience", "description": "GPU management" }
-      ]
-    },
-    {
-      "name": "Runtimes & Frameworks",
-      "packages": [
-        { "name": ".NET 8 Desktop Runtime", "wingetId": "Microsoft.DotNet.DesktopRuntime.8", "description": ".NET runtime" },
-        { "name": "VC++ 2015-2022 Redist", "wingetId": "Microsoft.VCRedist.2015+.x64", "description": "Visual C++ runtime" },
-        { "name": "Java JDK 21", "wingetId": "Oracle.JDK.21", "description": "Java Development Kit" },
-        { "name": "DirectX Runtime", "wingetId": "Microsoft.DirectX", "description": "DirectX components" }
+        {
+          "name": "Microsoft Office 365",
+          "wingetId": "Microsoft.Office",
+          "description": "Word, Excel, PowerPoint, Outlook"
+        },
+        {
+          "name": "Box Drive",
+          "wingetId": "Box.BoxDrive",
+          "description": "Cloud storage file sync"
+        },
+        {
+          "name": "Box Tools",
+          "wingetId": "Box.BoxTools",
+          "description": "Box editing and integration tools"
+        },
+        {
+          "name": "Citrix Workspace",
+          "wingetId": "Citrix.Workspace",
+          "description": "Remote desktop and virtual apps"
+        }
       ]
     }
   ]
