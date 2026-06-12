@@ -121,7 +121,7 @@ function Show-GUI {
     # Load packages
     $categories = Load-Packages
     if (-not $categories) {
-        [System.Windows.Forms.MessageBox]::Show("Failed to load package definitions. Please ensure config/packages.json exists.", "Error", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Error)
+        [System.Windows.Forms.MessageBox]::Show("Failed to load package definitions. Please ensure configpackages.json exists.", "Error", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Error)
         return
     }
 
