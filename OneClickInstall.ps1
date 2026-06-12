@@ -23,7 +23,7 @@ $Script:LogFile = Join-Path $PSScriptRoot "install_log_$(Get-Date -Format 'yyyyM
 if ($ConfigFile) {
     $Script:PackagesFile = Join-Path $PSScriptRoot "config\$ConfigFile"
 } else {
-    $Script:PackagesFile = Join-Path $PSScriptRoot "config\packages.json"
+    $Script:PackagesFile = Join-Path $PSScriptRoot "configpackages.json"
 }
 
 # ============================================
