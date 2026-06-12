@@ -17,7 +17,7 @@
 $Script:Version = "1.0.0"
 $Script:AppName = "OneClickInstall"
 $Script:LogFile = Join-Path $PSScriptRoot "install_log_$(Get-Date -Format 'yyyyMMdd_HHmmss').txt"
-$Script:PackagesFile = Join-Path $PSScriptRoot "config\packages.json"
+$Script:PackagesFile = Join-Path $PSScriptRoot "configpackages.json"
 
 # ============================================
 # HELPER FUNCTIONS
