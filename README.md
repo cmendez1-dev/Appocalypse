@@ -7,7 +7,7 @@
 
 A PowerShell bulk software installer with a modern dark GUI. Select what you need, click install, done. Powered by **winget**.
 
-![OneClickInstall Screenshot](assets/Screenshot.png)
+![OneClickInstall Screenshot](assets/screenshot.png)
 
 ---
 
