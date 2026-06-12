@@ -1,7 +1,7 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-    OneClickInstall - Bulk Software Installer with GUI
+    Appocalypse - Bulk Software Installer with GUI
 .DESCRIPTION
     A PowerShell tool with a Windows Forms GUI that allows you to select
     and install multiple software packages at once using winget.
@@ -17,7 +17,7 @@ param(
 # CONFIGURATION
 # ============================================
 $Script:Version = "1.0.0"
-$Script:AppName = "OneClickInstall"
+$Script:AppName = "Appocalypse"
 $Script:LogFile = Join-Path $PSScriptRoot "install_log_$(Get-Date -Format 'yyyyMMdd_HHmmss').txt"
 
 if ($ConfigFile) {
@@ -133,14 +133,15 @@ function Show-GUI {
     }
 
     # ---- COLORS ----
-    $colorBg        = [System.Drawing.Color]::FromArgb(30, 30, 30)
-    $colorPanel     = [System.Drawing.Color]::FromArgb(45, 45, 45)
-    $colorAccent    = [System.Drawing.Color]::FromArgb(0, 120, 212)
-    $colorText      = [System.Drawing.Color]::FromArgb(240, 240, 240)
-    $colorTextDim   = [System.Drawing.Color]::FromArgb(170, 170, 170)
-    $colorCatHeader = [System.Drawing.Color]::FromArgb(55, 55, 55)
-    $colorSuccess   = [System.Drawing.Color]::FromArgb(76, 175, 80)
-    $colorError     = [System.Drawing.Color]::FromArgb(244, 67, 54)
+    $colorBg        = [System.Drawing.Color]::FromArgb(15, 17, 23)       # #0F1117
+    $colorPanel     = [System.Drawing.Color]::FromArgb(26, 29, 41)       # #1A1D29
+    $colorAccent    = [System.Drawing.Color]::FromArgb(255, 94, 0)       # #FF5E00 (apocalypse orange)
+    $colorSecondary = [System.Drawing.Color]::FromArgb(168, 85, 247)     # #A855F7 (electric purple)
+    $colorSuccess   = [System.Drawing.Color]::FromArgb(34, 197, 94)      # #22C55E
+    $colorError     = [System.Drawing.Color]::FromArgb(239, 68, 68)      # #EF4444
+    $colorText      = [System.Drawing.Color]::FromArgb(248, 250, 252)    # #F8FAFC
+    $colorTextDim   = [System.Drawing.Color]::FromArgb(148, 163, 184)    # #94A3B8
+    $colorCatHeader = [System.Drawing.Color]::FromArgb(35, 38, 52)       # slightly lighter panel
 
     # ---- MAIN FORM ----
     $form = New-Object System.Windows.Forms.Form
@@ -200,7 +201,7 @@ function Show-GUI {
     $btnDeselectAll.FlatStyle = "Flat"
     $btnDeselectAll.BackColor = $colorPanel
     $btnDeselectAll.ForeColor = $colorText
-    $btnDeselectAll.FlatAppearance.BorderColor = $colorAccent
+    $btnDeselectAll.FlatAppearance.BorderColor = $colorSecondary
     $btnDeselectAll.Cursor = "Hand"
     $toolbar.Controls.Add($btnDeselectAll)
 
@@ -238,7 +239,7 @@ function Show-GUI {
         $catLabel = New-Object System.Windows.Forms.Label
         $catLabel.Text = "  > $($category.name)"
         $catLabel.Font = New-Object System.Drawing.Font("Segoe UI", 10, [System.Drawing.FontStyle]::Bold)
-        $catLabel.ForeColor = $colorText
+        $catLabel.ForeColor = $colorSecondary
         $catLabel.BackColor = $colorCatHeader
         $catLabel.Size = New-Object System.Drawing.Size(920, 28)
         $catLabel.Location = New-Object System.Drawing.Point(5, $yOffset)
@@ -385,6 +386,7 @@ function Show-GUI {
             $pkgId = $cb.Tag
 
             $lblStatus.Text = "Installing: $pkgName ($($progressBar.Value + 1)/$($selected.Count))..."
+            $lblStatus.ForeColor = $colorAccent
             $form.Refresh()
 
             $result = Install-Package -WingetId $pkgId -Name $pkgName
